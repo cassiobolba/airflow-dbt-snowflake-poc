@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: customer
+    columns:
+      - name: FIRST_NAME
+        tests:
+          - not_null

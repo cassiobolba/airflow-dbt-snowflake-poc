@@ -1,0 +1,210 @@
+[2023-07-02 01:09:52,837] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: 1_init_once_seed_data.load_seed_data_once scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2023-07-02 01:09:52,847] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: 1_init_once_seed_data.load_seed_data_once scheduled__2020-08-01T00:00:00+00:00 [queued]>
+[2023-07-02 01:09:52,847] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-02 01:09:52,848] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-07-02 01:09:52,848] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-02 01:09:52,863] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): load_seed_data_once> on 2020-08-01 00:00:00+00:00
+[2023-07-02 01:09:52,867] {standard_task_runner.py:52} INFO - Started process 300 to run task
+[2023-07-02 01:09:52,871] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', '1_init_once_seed_data', 'load_seed_data_once', 'scheduled__2020-08-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/init.py', '--cfg-path', '/tmp/tmpfulvdu56', '--error-file', '/tmp/tmphwsyp1gd']
+[2023-07-02 01:09:52,872] {standard_task_runner.py:77} INFO - Job 6: Subtask load_seed_data_once
+[2023-07-02 01:09:52,908] {logging_mixin.py:109} INFO - Running <TaskInstance: 1_init_once_seed_data.load_seed_data_once scheduled__2020-08-01T00:00:00+00:00 [running]> on host 2f7389cf635d
+[2023-07-02 01:09:52,934] {taskinstance.py:1686} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column xcom.execution_date does not exist
+LINE 1: ...ata' AND xcom.task_id = 'load_seed_data_once' AND xcom.execu...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1324, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1403, in _execute_task_with_callbacks
+    self.clear_xcom_data()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 795, in clear_xcom_data
+    session=session,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 67, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/xcom.py", line 322, in clear
+    return query.delete()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3926, in delete
+    delete_op.exec_()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1697, in exec_
+    self._do_exec()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1930, in _do_exec
+    self._execute_stmt(delete_stmt)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1702, in _execute_stmt
+    self.result = self.query._execute_crud(stmt, self.mapper)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3568, in _execute_crud
+    return conn.execute(stmt, self._params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column xcom.execution_date does not exist
+LINE 1: ...ata' AND xcom.task_id = 'load_seed_data_once' AND xcom.execu...
+                                                             ^
+
+[SQL: DELETE FROM xcom WHERE xcom.dag_id = %(dag_id_1)s AND xcom.task_id = %(task_id_1)s AND xcom.execution_date = %(execution_date_1)s]
+[parameters: {'dag_id_1': '1_init_once_seed_data', 'task_id_1': 'load_seed_data_once', 'execution_date_1': datetime.datetime(2020, 8, 1, 0, 0, tzinfo=Timezone('UTC'))}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+[2023-07-02 01:09:52,951] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=1_init_once_seed_data, task_id=load_seed_data_once, execution_date=20200801T000000, start_date=20230702T010952, end_date=20230702T010952
+[2023-07-02 01:09:52,957] {standard_task_runner.py:91} ERROR - Failed to execute job 6 for task load_seed_data_once
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column xcom.execution_date does not exist
+LINE 1: ...ata' AND xcom.task_id = 'load_seed_data_once' AND xcom.execu...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1324, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1403, in _execute_task_with_callbacks
+    self.clear_xcom_data()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 795, in clear_xcom_data
+    session=session,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 67, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/xcom.py", line 322, in clear
+    return query.delete()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3926, in delete
+    delete_op.exec_()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1697, in exec_
+    self._do_exec()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1930, in _do_exec
+    self._execute_stmt(delete_stmt)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1702, in _execute_stmt
+    self.result = self.query._execute_crud(stmt, self.mapper)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3568, in _execute_crud
+    return conn.execute(stmt, self._params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column xcom.execution_date does not exist
+LINE 1: ...ata' AND xcom.task_id = 'load_seed_data_once' AND xcom.execu...
+                                                             ^
+
+[SQL: DELETE FROM xcom WHERE xcom.dag_id = %(dag_id_1)s AND xcom.task_id = %(task_id_1)s AND xcom.execution_date = %(execution_date_1)s]
+[parameters: {'dag_id_1': '1_init_once_seed_data', 'task_id_1': 'load_seed_data_once', 'execution_date_1': datetime.datetime(2020, 8, 1, 0, 0, tzinfo=Timezone('UTC'))}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column "execution_date" of relation "task_fail" does not exist
+LINE 1: INSERT INTO task_fail (task_id, dag_id, execution_date, star...
+                                                ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1375, in _run_raw_task
+    self.handle_failure(e, test_mode, error_file=error_file, session=session)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 67, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1743, in handle_failure
+    session.flush()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2540, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2682, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2642, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "execution_date" of relation "task_fail" does not exist
+LINE 1: INSERT INTO task_fail (task_id, dag_id, execution_date, star...
+                                                ^
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, execution_date, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(execution_date)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'load_seed_data_once', 'dag_id': '1_init_once_seed_data', 'execution_date': datetime.datetime(2020, 8, 1, 0, 0, tzinfo=Timezone('UTC')), 'start_date': datetime.datetime(2023, 7, 2, 1, 9, 52, 839748, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 7, 2, 1, 9, 52, 950835, tzinfo=Timezone('UTC')), 'duration': 0}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+[2023-07-02 01:09:53,009] {local_task_job.py:154} INFO - Task exited with return code 1
+[2023-07-02 01:09:53,034] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=1_init_once_seed_data, task_id=load_seed_data_once, execution_date=20200801T000000, start_date=20230702T010952, end_date=20230702T010953

@@ -1,0 +1,27 @@
+[2023-07-02T08:40:14.009+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 1_init_once_seed_data.load_seed_data_once manual__2023-07-02T08:24:29.703225+00:00 [queued]>
+[2023-07-02T08:40:14.015+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 1_init_once_seed_data.load_seed_data_once manual__2023-07-02T08:24:29.703225+00:00 [queued]>
+[2023-07-02T08:40:14.015+0000] {taskinstance.py:1308} INFO - Starting attempt 5 of 5
+[2023-07-02T08:40:14.023+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): load_seed_data_once> on 2023-07-02 08:24:29.703225+00:00
+[2023-07-02T08:40:14.027+0000] {standard_task_runner.py:57} INFO - Started process 240 to run task
+[2023-07-02T08:40:14.030+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '1_init_once_seed_data', 'load_seed_data_once', 'manual__2023-07-02T08:24:29.703225+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/init.py', '--cfg-path', '/tmp/tmp4l08_s7e']
+[2023-07-02T08:40:14.031+0000] {standard_task_runner.py:85} INFO - Job 17: Subtask load_seed_data_once
+[2023-07-02T08:40:14.071+0000] {task_command.py:410} INFO - Running <TaskInstance: 1_init_once_seed_data.load_seed_data_once manual__2023-07-02T08:24:29.703225+00:00 [running]> on host cf8e7edddd3b
+[2023-07-02T08:40:14.145+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='1_init_once_seed_data' AIRFLOW_CTX_TASK_ID='load_seed_data_once' AIRFLOW_CTX_EXECUTION_DATE='2023-07-02T08:24:29.703225+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-02T08:24:29.703225+00:00'
+[2023-07-02T08:40:14.146+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-07-02T08:40:14.146+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt seed --profiles-dir .']
+[2023-07-02T08:40:14.154+0000] {subprocess.py:86} INFO - Output:
+[2023-07-02T08:40:15.654+0000] {subprocess.py:93} INFO - [0m08:40:15  Running with dbt=1.5.2
+[2023-07-02T08:40:16.697+0000] {subprocess.py:93} INFO - [0m08:40:16  Registered adapter: snowflake=1.5.1
+[2023-07-02T08:40:16.707+0000] {subprocess.py:93} INFO - [0m08:40:16  Encountered an error:
+[2023-07-02T08:40:16.708+0000] {subprocess.py:93} INFO - Compilation Error
+[2023-07-02T08:40:16.708+0000] {subprocess.py:93} INFO -   dbt found more than one package with the name "dbt" included in this project. Package names must be unique in a project. Please rename one of these packages.
+[2023-07-02T08:40:17.369+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-07-02T08:40:17.381+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-07-02T08:40:17.384+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=1_init_once_seed_data, task_id=load_seed_data_once, execution_date=20230702T082429, start_date=20230702T084014, end_date=20230702T084017
+[2023-07-02T08:40:17.393+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 17 for task load_seed_data_once (Bash command failed. The command returned a non-zero exit code 2.; 240)
+[2023-07-02T08:40:17.425+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-07-02T08:40:17.440+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
