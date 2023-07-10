@@ -21084,3 +21084,23 @@ File Path                                    PID    Runtime      # DAGs    # Err
 /opt/airflow/dags/library_dimensional.py                              1           0  0.11s           2023-07-10T05:24:54
 /opt/airflow/dags/transform_and_analysis.py                           1           0  0.12s           2023-07-10T05:24:55
 ================================================================================
+[2023-07-10T05:25:50.066+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.09s           2023-07-10T05:25:24
+/opt/airflow/dags/library_dimensional.py                              1           0  0.09s           2023-07-10T05:25:24
+/opt/airflow/dags/transform_and_analysis.py                           1           0  0.08s           2023-07-10T05:25:25
+================================================================================
+[2023-07-10T05:26:20.575+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.09s           2023-07-10T05:25:55
+/opt/airflow/dags/library_dimensional.py                              1           0  0.11s           2023-07-10T05:25:55
+/opt/airflow/dags/transform_and_analysis.py                           1           0  0.10s           2023-07-10T05:25:56
+================================================================================
