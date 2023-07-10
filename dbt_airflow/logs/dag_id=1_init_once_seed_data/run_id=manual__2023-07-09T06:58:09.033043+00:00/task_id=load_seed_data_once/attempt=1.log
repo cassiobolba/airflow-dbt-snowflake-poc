@@ -1,0 +1,56 @@
+[2023-07-09T06:58:10.031+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 1_init_once_seed_data.load_seed_data_once manual__2023-07-09T06:58:09.033043+00:00 [queued]>
+[2023-07-09T06:58:10.037+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 1_init_once_seed_data.load_seed_data_once manual__2023-07-09T06:58:09.033043+00:00 [queued]>
+[2023-07-09T06:58:10.038+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T06:58:10.046+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): load_seed_data_once> on 2023-07-09 06:58:09.033043+00:00
+[2023-07-09T06:58:10.049+0000] {standard_task_runner.py:57} INFO - Started process 352 to run task
+[2023-07-09T06:58:10.053+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '1_init_once_seed_data', 'load_seed_data_once', 'manual__2023-07-09T06:58:09.033043+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/init.py', '--cfg-path', '/tmp/tmpfsj0imce']
+[2023-07-09T06:58:10.054+0000] {standard_task_runner.py:85} INFO - Job 39: Subtask load_seed_data_once
+[2023-07-09T06:58:10.094+0000] {task_command.py:410} INFO - Running <TaskInstance: 1_init_once_seed_data.load_seed_data_once manual__2023-07-09T06:58:09.033043+00:00 [running]> on host b04aa736c938
+[2023-07-09T06:58:10.180+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='1_init_once_seed_data' AIRFLOW_CTX_TASK_ID='load_seed_data_once' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T06:58:09.033043+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T06:58:09.033043+00:00'
+[2023-07-09T06:58:10.181+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-07-09T06:58:10.182+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt/dbt && dbt seed --profiles-dir .']
+[2023-07-09T06:58:10.190+0000] {subprocess.py:86} INFO - Output:
+[2023-07-09T06:58:11.624+0000] {subprocess.py:93} INFO - [0m06:58:11  Running with dbt=1.5.2
+[2023-07-09T06:58:12.515+0000] {subprocess.py:93} INFO - [0m06:58:12  Registered adapter: snowflake=1.5.1
+[2023-07-09T06:58:12.653+0000] {subprocess.py:93} INFO - [0m06:58:12  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-07-09T06:58:12.654+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-07-09T06:58:12.655+0000] {subprocess.py:93} INFO - - models.dbt.transform
+[2023-07-09T06:58:12.655+0000] {subprocess.py:93} INFO - - models.dbt.analysis
+[2023-07-09T06:58:12.673+0000] {subprocess.py:93} INFO - [0m06:58:12  Found 5 models, 1 test, 0 snapshots, 0 analyses, 438 macros, 0 operations, 3 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2023-07-09T06:58:12.675+0000] {subprocess.py:93} INFO - [0m06:58:12
+[2023-07-09T06:58:14.362+0000] {subprocess.py:93} INFO - [0m06:58:14  Concurrency: 200 threads (target='dev')
+[2023-07-09T06:58:14.366+0000] {subprocess.py:93} INFO - [0m06:58:14
+[2023-07-09T06:58:14.410+0000] {subprocess.py:93} INFO - [0m06:58:14  1 of 3 START seed file public.bookings_1 ....................................... [RUN]
+[2023-07-09T06:58:14.412+0000] {subprocess.py:93} INFO - [0m06:58:14  2 of 3 START seed file public.bookings_2 ....................................... [RUN]
+[2023-07-09T06:58:14.413+0000] {subprocess.py:93} INFO - [0m06:58:14  3 of 3 START seed file public.customers ........................................ [RUN]
+[2023-07-09T06:58:14.966+0000] {subprocess.py:93} INFO - [0m06:58:14  [31mUnhandled error while executing [0m
+[2023-07-09T06:58:14.967+0000] {subprocess.py:93} INFO - [Errno 2] No such file or directory: '/dbt/seeds/bookings_1.csv'
+[2023-07-09T06:58:14.967+0000] {subprocess.py:93} INFO - [0m06:58:14  [31mUnhandled error while executing [0m
+[2023-07-09T06:58:14.968+0000] {subprocess.py:93} INFO - [Errno 2] No such file or directory: '/dbt/seeds/customers.csv'
+[2023-07-09T06:58:14.975+0000] {subprocess.py:93} INFO - [0m06:58:14  1 of 3 ERROR loading seed file public.bookings_1 ............................... [[31mERROR[0m in 0.55s]
+[2023-07-09T06:58:14.977+0000] {subprocess.py:93} INFO - [0m06:58:14  3 of 3 ERROR loading seed file public.customers ................................ [[31mERROR[0m in 0.56s]
+[2023-07-09T06:58:14.998+0000] {subprocess.py:93} INFO - [0m06:58:14  [31mUnhandled error while executing [0m
+[2023-07-09T06:58:14.999+0000] {subprocess.py:93} INFO - [Errno 2] No such file or directory: '/dbt/seeds/bookings_2.csv'
+[2023-07-09T06:58:15.003+0000] {subprocess.py:93} INFO - [0m06:58:15  2 of 3 ERROR loading seed file public.bookings_2 ............................... [[31mERROR[0m in 0.59s]
+[2023-07-09T06:58:15.034+0000] {subprocess.py:93} INFO - [0m06:58:15
+[2023-07-09T06:58:15.035+0000] {subprocess.py:93} INFO - [0m06:58:15  Finished running 3 seeds in 0 hours 0 minutes and 2.36 seconds (2.36s).
+[2023-07-09T06:58:15.048+0000] {subprocess.py:93} INFO - [0m06:58:15
+[2023-07-09T06:58:15.049+0000] {subprocess.py:93} INFO - [0m06:58:15  [31mCompleted with 3 errors and 0 warnings:[0m
+[2023-07-09T06:58:15.050+0000] {subprocess.py:93} INFO - [0m06:58:15
+[2023-07-09T06:58:15.051+0000] {subprocess.py:93} INFO - [0m06:58:15  [33m[Errno 2] No such file or directory: '/dbt/seeds/bookings_1.csv'[0m
+[2023-07-09T06:58:15.052+0000] {subprocess.py:93} INFO - [0m06:58:15
+[2023-07-09T06:58:15.053+0000] {subprocess.py:93} INFO - [0m06:58:15  [33m[Errno 2] No such file or directory: '/dbt/seeds/customers.csv'[0m
+[2023-07-09T06:58:15.054+0000] {subprocess.py:93} INFO - [0m06:58:15
+[2023-07-09T06:58:15.055+0000] {subprocess.py:93} INFO - [0m06:58:15  [33m[Errno 2] No such file or directory: '/dbt/seeds/bookings_2.csv'[0m
+[2023-07-09T06:58:15.055+0000] {subprocess.py:93} INFO - [0m06:58:15
+[2023-07-09T06:58:15.056+0000] {subprocess.py:93} INFO - [0m06:58:15  Done. PASS=0 WARN=0 ERROR=3 SKIP=0 TOTAL=3
+[2023-07-09T06:58:15.823+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-07-09T06:58:15.834+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-07-09T06:58:15.837+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=1_init_once_seed_data, task_id=load_seed_data_once, execution_date=20230709T065809, start_date=20230709T065810, end_date=20230709T065815
+[2023-07-09T06:58:15.846+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 39 for task load_seed_data_once (Bash command failed. The command returned a non-zero exit code 1.; 352)
+[2023-07-09T06:58:15.876+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-07-09T06:58:15.889+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
