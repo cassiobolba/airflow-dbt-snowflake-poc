@@ -23265,3 +23265,95 @@ File Path                                      PID  Runtime      # DAGs    # Err
 /opt/airflow/dags/library_dimensional.py      4237  0.00s             1           0  0.09s           2024-04-26T14:45:05
 /opt/airflow/dags/transform_and_analysis.py   4236  0.01s             1           0  0.10s           2024-04-26T14:45:05
 ================================================================================
+[2024-04-26T14:45:46.857+0000] {manager.py:758} INFO - Searching for files in /opt/airflow/dags
+[2024-04-26T14:45:46.867+0000] {manager.py:761} INFO - There are 3 files in /opt/airflow/dags
+[2024-04-26T14:46:06.070+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.11s           2024-04-26T14:45:36
+/opt/airflow/dags/library_dimensional.py      4267  0.00s             1           0  0.10s           2024-04-26T14:45:35
+/opt/airflow/dags/transform_and_analysis.py   4266  0.02s             1           0  0.10s           2024-04-26T14:45:35
+================================================================================
+[2024-04-26T14:46:36.435+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.10s           2024-04-26T14:46:07
+/opt/airflow/dags/library_dimensional.py      4289  0.01s             1           0  0.09s           2024-04-26T14:46:06
+/opt/airflow/dags/transform_and_analysis.py   4286  0.01s             1           0  0.11s           2024-04-26T14:46:06
+================================================================================
+[2024-04-26T14:47:06.817+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.09s           2024-04-26T14:46:37
+/opt/airflow/dags/library_dimensional.py      4317  0.00s             1           0  0.11s           2024-04-26T14:46:36
+/opt/airflow/dags/transform_and_analysis.py   4316  0.02s             1           0  0.11s           2024-04-26T14:46:36
+================================================================================
+[2024-04-26T14:47:37.149+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.11s           2024-04-26T14:47:07
+/opt/airflow/dags/library_dimensional.py      4348  0.00s             1           0  0.09s           2024-04-26T14:47:06
+/opt/airflow/dags/transform_and_analysis.py   4347  0.01s             1           0  0.11s           2024-04-26T14:47:06
+================================================================================
+[2024-04-26T14:48:07.458+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.09s           2024-04-26T14:47:38
+/opt/airflow/dags/library_dimensional.py      4369  0.00s             1           0  0.09s           2024-04-26T14:47:37
+/opt/airflow/dags/transform_and_analysis.py   4368  0.01s             1           0  0.10s           2024-04-26T14:47:37
+================================================================================
+[2024-04-26T14:48:37.803+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.10s           2024-04-26T14:48:08
+/opt/airflow/dags/library_dimensional.py      4399  0.00s             1           0  0.09s           2024-04-26T14:48:07
+/opt/airflow/dags/transform_and_analysis.py   4398  0.01s             1           0  0.10s           2024-04-26T14:48:07
+================================================================================
+[2024-04-26T14:49:08.154+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.11s           2024-04-26T14:48:38
+/opt/airflow/dags/library_dimensional.py      4430  0.00s             1           0  0.10s           2024-04-26T14:48:37
+/opt/airflow/dags/transform_and_analysis.py   4429  0.01s             1           0  0.10s           2024-04-26T14:48:37
+================================================================================
+[2024-04-26T14:49:38.567+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.11s           2024-04-26T14:49:09
+/opt/airflow/dags/library_dimensional.py      4451  0.00s             1           0  0.10s           2024-04-26T14:49:08
+/opt/airflow/dags/transform_and_analysis.py   4450  0.02s             1           0  0.10s           2024-04-26T14:49:08
+================================================================================
+[2024-04-26T14:50:08.951+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.11s           2024-04-26T14:49:39
+/opt/airflow/dags/library_dimensional.py      4481  0.00s             1           0  0.10s           2024-04-26T14:49:38
+/opt/airflow/dags/transform_and_analysis.py   4480  0.01s             1           0  0.11s           2024-04-26T14:49:38
+================================================================================

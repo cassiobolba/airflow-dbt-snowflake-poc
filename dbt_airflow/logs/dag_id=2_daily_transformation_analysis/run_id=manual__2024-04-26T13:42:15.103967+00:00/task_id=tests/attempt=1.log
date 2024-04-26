@@ -1,0 +1,34 @@
+[2024-04-26T13:42:30.096+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 2_daily_transformation_analysis.tests manual__2024-04-26T13:42:15.103967+00:00 [queued]>
+[2024-04-26T13:42:30.104+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 2_daily_transformation_analysis.tests manual__2024-04-26T13:42:15.103967+00:00 [queued]>
+[2024-04-26T13:42:30.105+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2024-04-26T13:42:30.116+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): tests> on 2024-04-26 13:42:15.103967+00:00
+[2024-04-26T13:42:30.121+0000] {standard_task_runner.py:57} INFO - Started process 1538 to run task
+[2024-04-26T13:42:30.124+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', '2_daily_transformation_analysis', 'tests', 'manual__2024-04-26T13:42:15.103967+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/transform_and_analysis.py', '--cfg-path', '/tmp/tmpvjm1evpb']
+[2024-04-26T13:42:30.125+0000] {standard_task_runner.py:85} INFO - Job 72: Subtask tests
+[2024-04-26T13:42:30.176+0000] {task_command.py:410} INFO - Running <TaskInstance: 2_daily_transformation_analysis.tests manual__2024-04-26T13:42:15.103967+00:00 [running]> on host 511926b065ed
+[2024-04-26T13:42:30.281+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='2_daily_transformation_analysis' AIRFLOW_CTX_TASK_ID='tests' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T13:42:15.103967+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-26T13:42:15.103967+00:00'
+[2024-04-26T13:42:30.283+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-26T13:42:30.283+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /dbt && dbt test --models transform --profiles-dir .']
+[2024-04-26T13:42:30.293+0000] {subprocess.py:86} INFO - Output:
+[2024-04-26T13:42:32.091+0000] {subprocess.py:93} INFO - [0m13:42:32  Running with dbt=1.5.2
+[2024-04-26T13:42:32.680+0000] {subprocess.py:93} INFO - [0m13:42:32  Registered adapter: snowflake=1.5.1
+[2024-04-26T13:42:32.776+0000] {subprocess.py:93} INFO - [0m13:42:32  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2024-04-26T13:42:32.776+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2024-04-26T13:42:32.777+0000] {subprocess.py:93} INFO - - models.dbt.analysis
+[2024-04-26T13:42:32.777+0000] {subprocess.py:93} INFO - - models.dbt.transform
+[2024-04-26T13:42:32.798+0000] {subprocess.py:93} INFO - [0m13:42:32  Found 5 models, 1 test, 0 snapshots, 0 analyses, 438 macros, 0 operations, 4 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[2024-04-26T13:42:32.801+0000] {subprocess.py:93} INFO - [0m13:42:32
+[2024-04-26T13:42:33.308+0000] {subprocess.py:93} INFO - [0m13:42:33  Concurrency: 200 threads (target='dev')
+[2024-04-26T13:42:33.309+0000] {subprocess.py:93} INFO - [0m13:42:33
+[2024-04-26T13:42:33.339+0000] {subprocess.py:93} INFO - [0m13:42:33  1 of 1 START test not_null_customer_FIRST_NAME ................................. [RUN]
+[2024-04-26T13:42:34.433+0000] {subprocess.py:93} INFO - [0m13:42:34  1 of 1 PASS not_null_customer_FIRST_NAME ....................................... [[32mPASS[0m in 1.09s]
+[2024-04-26T13:42:34.494+0000] {subprocess.py:93} INFO - [0m13:42:34
+[2024-04-26T13:42:34.495+0000] {subprocess.py:93} INFO - [0m13:42:34  Finished running 1 test in 0 hours 0 minutes and 1.69 seconds (1.69s).
+[2024-04-26T13:42:34.511+0000] {subprocess.py:93} INFO - [0m13:42:34
+[2024-04-26T13:42:34.512+0000] {subprocess.py:93} INFO - [0m13:42:34  [32mCompleted successfully[0m
+[2024-04-26T13:42:34.513+0000] {subprocess.py:93} INFO - [0m13:42:34
+[2024-04-26T13:42:34.514+0000] {subprocess.py:93} INFO - [0m13:42:34  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-04-26T13:42:35.269+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-04-26T13:42:35.297+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=2_daily_transformation_analysis, task_id=tests, execution_date=20240426T134215, start_date=20240426T134230, end_date=20240426T134235
+[2024-04-26T13:42:35.345+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-04-26T13:42:35.361+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,4 +1,4 @@
 env/
 .env/
-logs/
-logs
+dbt_airflow/logs/
+.dbt_airflow/logs/
