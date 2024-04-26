@@ -5,7 +5,7 @@ default:
       type: snowflake
       ######## Please replace with your Snowflake account name 
       ######## for example sg_demo.ap-southeast-1
-      account: ay58901.eu-central-1
+      account: dq20903.eu-central-1
 
       user: "{{ env_var('dbt_user') }}"
       ######## These environment variables dbt_user and dbt_password 
