@@ -1,5 +1,4 @@
-dbt_airflow/env
-dbt_airflow/.env
+*.env
 dbt_airflow/logs/*
 .dbt_airflow/logs/*
 dbt_airflow/data_src/*
