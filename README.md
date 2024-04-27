@@ -41,6 +41,23 @@ GRANT ALL ON WAREHOUSE DBT_WH TO ROLE DBT_ROLE;
 ```
 CREATE OR REPLACE DATABASE DEMO_DBT
 ```
+## Run DBT docs
+1 - Add the port exposuser in the worker deployment like this below, and rebuild the container
+```yml
+  airflow-worker:
+    <<: *airflow-common
+    command: celery worker
+    ports:
+      - 8081:8081
+```
+2 - enter in the worker container, via docker desktop or exec into it
+3 - to exec into into it
+  * run `docker ps`
+  * get the container id from the image corresponding to the worker, should be something like `511926b065ed`
+  * then run `docker exec -it  511926b065ed bash`
+4 - cd to the dbt folder ( in my case, had to go back 2 folders with  `cd ..` till find the dbt folder)
+5 - from inside the dbt folder run `dbt docs generate` and then `dbt docs serve --port 8081`
+6 - docs should be accesible in the link
 
 
 ## Help

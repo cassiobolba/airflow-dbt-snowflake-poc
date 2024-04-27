@@ -63,6 +63,8 @@ x-airflow-common:
     _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
     _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
     #_PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    DBT_USER: ${DBT_USER}
+    DBT_PASSWORD: ${DBT_PASSWORD}
   user: "${AIRFLOW_UID:-50000}:1001"
   volumes:
     - ./dags:/opt/airflow/dags
@@ -137,6 +139,8 @@ services:
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    ports:
+      - 8081:8081
     healthcheck:
       test:
         - "CMD-SHELL"

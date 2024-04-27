@@ -7,10 +7,10 @@ default:
       ######## for example sg_demo.ap-southeast-1
       account: dq20903.eu-central-1
 
-      user: "{{ env_var('dbt_user') }}"
+      user: "{{ env_var('DBT_USER') }}"
       ######## These environment variables dbt_user and dbt_password 
       ######## are read from the variabls in Airflow which we will set later
-      password: "{{ env_var('dbt_password') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
 
       role: dbt_dev_role
       database: demo_dbt
