@@ -70,6 +70,7 @@ x-airflow-common:
     - ./plugins:/opt/airflow/plugins
     - ./dbt:/dbt # add this in
     - ./dags:/dags # add this in
+    - ./data_src:/data_src
   depends_on:
     &airflow-common-depends-on
     redis:

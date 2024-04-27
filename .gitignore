@@ -1,0 +1,6 @@
+env
+.env
+dbt_airflow/logs/*
+.dbt_airflow/logs/*
+dbt_airflow/data_src/*
+.dbt_airflow/data_src/*

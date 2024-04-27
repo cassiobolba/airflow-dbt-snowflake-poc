@@ -1,2 +1,3 @@
 dbt-core
 dbt-snowflake
+pandas
