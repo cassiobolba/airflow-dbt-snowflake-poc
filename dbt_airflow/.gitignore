@@ -2,3 +2,5 @@ env/
 .env/
 dbt_airflow/logs/
 .dbt_airflow/logs/
+./Users/debolbac/Documents/GitHub/airflow-dbt-snowflake-poc/dbt_airflow/dags/account-statement_2024-04-01_2024-04-30_pt_62a9ca.csv
+/Users/debolbac/Documents/GitHub/airflow-dbt-snowflake-poc/dbt_airflow/dags/account-statement_2024-04-01_2024-04-30_pt_62a9ca.csv
