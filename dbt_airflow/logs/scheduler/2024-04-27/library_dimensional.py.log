@@ -1671,3 +1671,24 @@
 [2024-04-27T07:01:52.059+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:01:52.059+0000] {dag.py:2726} INFO - Sync 1 DAGs
 [2024-04-27T07:01:52.076+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:01:52.076+0000] {dag.py:3490} INFO - Setting next_dagrun for library_dimensional to 2020-08-01T00:00:00+00:00, run_after=2020-08-01T00:00:00+00:00
 [2024-04-27T07:01:52.089+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/library_dimensional.py took 0.071 seconds
+[2024-04-27T07:02:22.432+0000] {processor.py:157} INFO - Started process (PID=681) to work on /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:02:22.432+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/library_dimensional.py for tasks to queue
+[2024-04-27T07:02:22.433+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:02:22.433+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:02:22.444+0000] {processor.py:836} INFO - DAG(s) dict_keys(['library_dimensional']) retrieved from /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:02:22.466+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:02:22.466+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2024-04-27T07:02:22.486+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:02:22.486+0000] {dag.py:3490} INFO - Setting next_dagrun for library_dimensional to 2020-08-01T00:00:00+00:00, run_after=2020-08-01T00:00:00+00:00
+[2024-04-27T07:02:22.499+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/library_dimensional.py took 0.071 seconds
+[2024-04-27T07:02:52.853+0000] {processor.py:157} INFO - Started process (PID=712) to work on /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:02:52.854+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/library_dimensional.py for tasks to queue
+[2024-04-27T07:02:52.855+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:02:52.855+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:02:52.865+0000] {processor.py:836} INFO - DAG(s) dict_keys(['library_dimensional']) retrieved from /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:02:52.888+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:02:52.888+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2024-04-27T07:02:52.907+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:02:52.907+0000] {dag.py:3490} INFO - Setting next_dagrun for library_dimensional to 2020-08-01T00:00:00+00:00, run_after=2020-08-01T00:00:00+00:00
+[2024-04-27T07:02:52.919+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/library_dimensional.py took 0.068 seconds
+[2024-04-27T07:03:23.310+0000] {processor.py:157} INFO - Started process (PID=734) to work on /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:03:23.311+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/library_dimensional.py for tasks to queue
+[2024-04-27T07:03:23.312+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:03:23.311+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:03:23.322+0000] {processor.py:836} INFO - DAG(s) dict_keys(['library_dimensional']) retrieved from /opt/airflow/dags/library_dimensional.py
+[2024-04-27T07:03:23.345+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:03:23.345+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2024-04-27T07:03:23.362+0000] {logging_mixin.py:149} INFO - [2024-04-27T07:03:23.362+0000] {dag.py:3490} INFO - Setting next_dagrun for library_dimensional to 2020-08-01T00:00:00+00:00, run_after=2020-08-01T00:00:00+00:00
+[2024-04-27T07:03:23.376+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/library_dimensional.py took 0.070 seconds

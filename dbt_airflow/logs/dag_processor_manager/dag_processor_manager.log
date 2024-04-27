@@ -28550,3 +28550,36 @@ File Path                                      PID  Runtime      # DAGs    # Err
 /opt/airflow/dags/python_op.py                                        1           0  0.11s           2024-04-27T07:01:44
 /opt/airflow/dags/transform_and_analysis.py    650  0.02s             1           0  0.09s           2024-04-27T07:01:21
 ================================================================================
+[2024-04-27T07:02:22.424+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.09s           2024-04-27T07:01:52
+/opt/airflow/dags/library_dimensional.py       681  0.00s             1           0  0.09s           2024-04-27T07:01:52
+/opt/airflow/dags/python_op.py                                        1           0  0.10s           2024-04-27T07:02:15
+/opt/airflow/dags/transform_and_analysis.py    680  0.02s             1           0  0.11s           2024-04-27T07:01:52
+================================================================================
+[2024-04-27T07:02:52.845+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.10s           2024-04-27T07:02:22
+/opt/airflow/dags/library_dimensional.py       712  0.00s             1           0  0.09s           2024-04-27T07:02:22
+/opt/airflow/dags/python_op.py                                        1           0  0.10s           2024-04-27T07:02:45
+/opt/airflow/dags/transform_and_analysis.py    711  0.02s             1           0  0.10s           2024-04-27T07:02:22
+================================================================================
+[2024-04-27T07:03:23.301+0000] {manager.py:889} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init.py                                             1           0  0.10s           2024-04-27T07:02:53
+/opt/airflow/dags/library_dimensional.py       734  0.00s             1           0  0.09s           2024-04-27T07:02:52
+/opt/airflow/dags/python_op.py                                        1           0  0.10s           2024-04-27T07:03:16
+/opt/airflow/dags/transform_and_analysis.py    733  0.02s             1           0  0.11s           2024-04-27T07:02:52
+================================================================================
