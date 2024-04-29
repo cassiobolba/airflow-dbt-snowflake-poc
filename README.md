@@ -1,5 +1,21 @@
-# airflow-dbt-snowflake-poc
-This readme is incomplete so far.
+# airflow-dbt-snowflake-poc (WIP)
+Containerized stack for small workloads ands POCs purposes, deploying via docker compose: 
+* Airflow
+* DBT core
+* DBT dbt docs exposure port
+* Mapped volume to place data sources `data_src`
+
+## Pre requisites
+* Install docker and run it
+* Clone this repo 
+* Create Snowlake account
+* Setup Snowflake credentials as described below
+* Create a copy of the file env_example renaming to `.env` in same folder.
+* Fill user and password with the snowflake created objects
+* Enter in `dbt_airflow` folder via command line
+* With docker running. execute `docker compose up`
+* In couple seconds airflow should be accessible via http://localhost:8080
+
 
 ## Setup Snowflake
 * Setup a 30 days trial account
@@ -41,7 +57,10 @@ GRANT ALL ON WAREHOUSE DBT_WH TO ROLE DBT_ROLE;
 ```
 CREATE OR REPLACE DATABASE DEMO_DBT
 ```
-## Run DBT docs
+
+
+## Help - other stuff
+### Run DBT docs
 1 - Add the port exposuser in the worker deployment like this below, and rebuild the container
 ```yml
   airflow-worker:
@@ -59,8 +78,6 @@ CREATE OR REPLACE DATABASE DEMO_DBT
 5 - from inside the dbt folder run `dbt docs generate` and then `dbt docs serve --port 8081`
 6 - docs should be accesible in the link
 
-
-## Help
 ### Get dbt up and running from the command line on a MacBook with an M1 chip - Error for Mac Users
 https://discourse.getdbt.com/t/get-dbt-up-and-running-from-the-command-line-on-a-macbook-with-an-m1-chip/2908/2
 
