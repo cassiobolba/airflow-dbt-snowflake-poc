@@ -3,3 +3,4 @@ AIRFLOW_IMAGE_NAME=airflow-dbt
 AIRFLOW_UID=50000
 DBT_USER=<your dbt user>
 DBT_PASSWORD=<your password>
+SF_ACCOUNT=<you account>

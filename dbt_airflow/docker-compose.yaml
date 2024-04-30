@@ -65,6 +65,7 @@ x-airflow-common:
     #_PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     DBT_USER: ${DBT_USER}
     DBT_PASSWORD: ${DBT_PASSWORD}
+    SF_ACCOUNT: ${SF_ACCOUNT}
   user: "${AIRFLOW_UID:-50000}:1001"
   volumes:
     - ./dags:/opt/airflow/dags
