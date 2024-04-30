@@ -5,3 +5,4 @@ dbt_airflow/data_src/*.csv
 .dbt_airflow/data_src/*.csv
 *.DS_Store
 .dbt_airflow/dags/__pycache__/*
+*.vscode
