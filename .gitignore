@@ -1,8 +1,6 @@
 *.env
 dbt_airflow/logs/*
-.dbt_airflow/logs/*
 dbt_airflow/data_src/*.csv
-.dbt_airflow/data_src/*.csv
 *.DS_Store
-.dbt_airflow/dags/__pycache__/*
+dbt_airflow/dags/__pycache__/*
 *.vscode
